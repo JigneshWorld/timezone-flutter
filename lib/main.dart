@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:timezone/data/latest.dart' as tzdata;
+import 'package:timezone_app/pages/cities_page.dart';
 
 void main() {
+  tzdata.initializeTimeZones();
   runApp(MyApp());
 }
 
@@ -12,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(),
+      home: CitiesPage(),
     );
   }
 }
